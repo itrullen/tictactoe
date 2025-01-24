@@ -4,11 +4,12 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 /**
- * Example local unit test, which will execute on the development machine (host).
+ * Tic Tac Toe Tests
  *
- * See [testing documentation](http://d.android.com/tools/testing).
+ * Rules are here: https://en.wikipedia.org/wiki/Tic-tac-toe
+ *
  */
-class TicTacToeTest {
+class TicTacToeTests {
     @Test
     fun `Start with player X`() {
         // Given
