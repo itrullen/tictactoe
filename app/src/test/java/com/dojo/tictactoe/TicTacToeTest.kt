@@ -61,4 +61,16 @@ class TicTacToeTest {
         // Then
         assertEquals(Player.X, ticTacToeGame.getWinner())
     }
+
+    @Test
+    fun `Make no winner at the start`() {
+        // Given
+        val ticTacToeGame = TicTacToeGame()
+
+        // When
+        val winner = ticTacToeGame.getWinner()
+
+        // Then
+        assertEquals(Player.None, winner)
+    }
 }
