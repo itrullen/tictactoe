@@ -1,8 +1,7 @@
 package com.dojo.tictactoe
 
+import org.junit.Assert.assertEquals
 import org.junit.Test
-
-import org.junit.Assert.*
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -20,5 +19,17 @@ class TicTacToeTest {
 
         // Then
         assertEquals(Player.X, currentPlayer)
+    }
+
+    @Test
+    fun `Second player should be O`() {
+        // Given
+        val ticTacToeGame = TicTacToeGame()
+
+        // When
+        ticTacToeGame.play()
+
+        // Then
+        assertEquals(Player.O, ticTacToeGame.getCurrentPlayer())
     }
 }

@@ -1,7 +1,13 @@
 package com.dojo.tictactoe
 
 class TicTacToeGame {
+    private var currentPlayer = Player.X
+
     fun getCurrentPlayer(): Player {
-        return Player.X
+        return currentPlayer
+    }
+
+    fun play() {
+        currentPlayer = Player.O
     }
 }
