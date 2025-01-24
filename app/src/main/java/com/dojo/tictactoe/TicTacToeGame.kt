@@ -4,6 +4,11 @@ class TicTacToeGame {
     private var currentPlayer = Player.X
     private var board = Array(9) { Player.None }
 
+    private val winnerCombinations: List<Array<Cell>> = listOf(
+        arrayOf(Cell.TopLeft, Cell.MiddleLeft, Cell.BottomLeft),
+        arrayOf(Cell.MiddleLeft, Cell.MiddleCenter, Cell.MiddleRight),
+    )
+
     fun getCurrentPlayer(): Player {
         return currentPlayer
     }
@@ -14,11 +19,16 @@ class TicTacToeGame {
     }
 
     fun getWinner(): Player {
-        return if (board[0] == board[3] && board[3] == board[6]) {
-            board[0]
-        } else {
-            Player.None
+        winnerCombinations.forEach { combination ->
+            if (board[combination[0].ordinal] == board[combination[1].ordinal]
+                && board[combination[1].ordinal] == board[combination[2].ordinal]
+            ) {
+                // There is a winner
+                return board[combination[0].ordinal]
+            }
         }
+        // There is no winner
+        return Player.None
     }
 
     private fun switchPlayers() {
