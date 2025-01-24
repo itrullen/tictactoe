@@ -7,6 +7,7 @@ class TicTacToeGame {
     private val winnerCombinations: List<Array<Cell>> = listOf(
         arrayOf(Cell.TopLeft, Cell.MiddleLeft, Cell.BottomLeft),
         arrayOf(Cell.TopCenter, Cell.MiddleCenter, Cell.BottomCenter),
+        arrayOf(Cell.TopRight, Cell.MiddleRight, Cell.BottomRight),
         arrayOf(Cell.MiddleLeft, Cell.MiddleCenter, Cell.MiddleRight),
         arrayOf(Cell.TopLeft, Cell.MiddleCenter, Cell.BottomRight),
     )
