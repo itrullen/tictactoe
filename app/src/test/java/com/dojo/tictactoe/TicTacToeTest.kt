@@ -32,4 +32,17 @@ class TicTacToeTest {
         // Then
         assertEquals(Player.O, ticTacToeGame.getCurrentPlayer())
     }
+
+    @Test
+    fun `Make the players switch`() {
+        // Given
+        val ticTacToeGame = TicTacToeGame()
+
+        // When
+        ticTacToeGame.play()
+        ticTacToeGame.play()
+
+        // Then
+        assertEquals(Player.X, ticTacToeGame.getCurrentPlayer())
+    }
 }

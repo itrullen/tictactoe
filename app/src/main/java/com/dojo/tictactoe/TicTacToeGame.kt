@@ -8,6 +8,6 @@ class TicTacToeGame {
     }
 
     fun play() {
-        currentPlayer = Player.O
+        currentPlayer = if (currentPlayer == Player.X) Player.O else Player.X
     }
 }
