@@ -91,4 +91,20 @@ class TicTacToeTest {
         // Then
         assertEquals(Player.O, ticTacToeGame.getWinner())
     }
+
+    @Test
+    fun `Make X win on diagonal line`() {
+        // Given
+        val ticTacToeGame = TicTacToeGame()
+
+        // When
+        ticTacToeGame.play(Cell.TopLeft)
+        ticTacToeGame.play(Cell.MiddleLeft)
+        ticTacToeGame.play(Cell.MiddleCenter)
+        ticTacToeGame.play(Cell.BottomLeft)
+        ticTacToeGame.play(Cell.BottomRight)
+
+        // Then
+        assertEquals(Player.X, ticTacToeGame.getWinner())
+    }
 }
