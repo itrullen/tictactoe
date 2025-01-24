@@ -107,4 +107,23 @@ class TicTacToeTest {
         // Then
         assertEquals(Player.X, ticTacToeGame.getWinner())
     }
+
+    @Test
+    fun `Make the game finish with a draw`() {
+        // Given
+        val ticTacToeGame = TicTacToeGame()
+
+        // When
+        ticTacToeGame.play(Cell.TopLeft)
+        ticTacToeGame.play(Cell.TopCenter)
+        ticTacToeGame.play(Cell.TopLeft)
+        ticTacToeGame.play(Cell.MiddleLeft)
+        ticTacToeGame.play(Cell.MiddleRight)
+        ticTacToeGame.play(Cell.BottomLeft)
+        ticTacToeGame.play(Cell.BottomCenter)
+        ticTacToeGame.play(Cell.BottomRight)
+
+        // Then
+        assertEquals(Player.None, ticTacToeGame.getWinner())
+    }
 }
