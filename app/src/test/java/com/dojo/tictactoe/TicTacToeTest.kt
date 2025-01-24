@@ -11,7 +11,14 @@ import org.junit.Assert.*
  */
 class TicTacToeTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun `Start with player X`() {
+        // Given
+        val ticTacToeGame = TicTacToeGame()
+
+        // When
+        val currentPlayer = ticTacToeGame.getCurrentPlayer()
+
+        // Then
+        assertEquals(Player.X, currentPlayer)
     }
 }
