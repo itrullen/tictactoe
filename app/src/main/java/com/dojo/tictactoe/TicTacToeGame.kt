@@ -27,12 +27,12 @@ class TicTacToeGame {
     }
 
     fun getWinner(): Player {
-        winnerCombinations.forEach { combination ->
-            if (board[combination[0].ordinal] == board[combination[1].ordinal]
-                && board[combination[1].ordinal] == board[combination[2].ordinal]
+        winnerCombinations.forEach { (first, second, third) ->
+            if (board[first.ordinal] == board[second.ordinal]
+                && board[second.ordinal] == board[third.ordinal]
             ) {
                 // There is a winner
-                return board[combination[0].ordinal]
+                return board[first.ordinal]
             }
         }
         // There is no winner
