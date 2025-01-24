@@ -27,7 +27,7 @@ class TicTacToeTest {
         val ticTacToeGame = TicTacToeGame()
 
         // When
-        ticTacToeGame.play()
+        ticTacToeGame.play(Cell.MiddleCenter)
 
         // Then
         assertEquals(Player.O, ticTacToeGame.getCurrentPlayer())
@@ -39,10 +39,26 @@ class TicTacToeTest {
         val ticTacToeGame = TicTacToeGame()
 
         // When
-        ticTacToeGame.play()
-        ticTacToeGame.play()
+        ticTacToeGame.play(Cell.MiddleCenter)
+        ticTacToeGame.play(Cell.MiddleCenter)
 
         // Then
         assertEquals(Player.X, ticTacToeGame.getCurrentPlayer())
+    }
+
+    @Test
+    fun `Make X win on left column`() {
+        // Given
+        val ticTacToeGame = TicTacToeGame()
+
+        // When
+        ticTacToeGame.play(Cell.TopLeft)
+        ticTacToeGame.play(Cell.MiddleCenter)
+        ticTacToeGame.play(Cell.MiddleLeft)
+        ticTacToeGame.play(Cell.BottomRight)
+        ticTacToeGame.play(Cell.BottomLeft)
+
+        // Then
+        assertEquals(Player.X, ticTacToeGame.getWinner())
     }
 }
