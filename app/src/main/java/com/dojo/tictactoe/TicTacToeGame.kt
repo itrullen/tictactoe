@@ -11,6 +11,8 @@ class TicTacToeGame {
 
         arrayOf(Cell.TopLeft, Cell.TopCenter, Cell.TopRight),
         arrayOf(Cell.MiddleLeft, Cell.MiddleCenter, Cell.MiddleRight),
+        arrayOf(Cell.BottomLeft, Cell.BottomCenter, Cell.BottomRight),
+
         arrayOf(Cell.TopLeft, Cell.MiddleCenter, Cell.BottomRight),
     )
 
