@@ -14,6 +14,7 @@ class TicTacToeGame {
         arrayOf(Cell.BottomLeft, Cell.BottomCenter, Cell.BottomRight),
 
         arrayOf(Cell.TopLeft, Cell.MiddleCenter, Cell.BottomRight),
+        arrayOf(Cell.TopRight, Cell.MiddleCenter, Cell.BottomLeft),
     )
 
     fun getCurrentPlayer(): Player {
